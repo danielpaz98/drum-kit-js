@@ -1,0 +1,50 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	background-image: url("background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.keys {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.key {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 4px solid rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 7rem;
+	height: 6rem;
+	transition: transform .1s;
+}
+
+.key kbd {
+	font-size: 25px;
+}
+
+.key .sound {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: goldenrod;
+}
+
+.pressed {
+	border: 4px solid goldenrod;
+	filter: drop-shadow(0 0 4px);
+	transform: scale(1.1);
+}
